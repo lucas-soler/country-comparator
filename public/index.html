@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Country Comparator</title>
+    <link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Choose two <u>different countries</u> to compare.</h1>
+        </div>
+        <div class="row">
+            <span>Type two country names and press enter. Both countries must exist and have to be different to
+                compare.</span>
+        </div>
+        <hr />
+        <div class="error-message-row">
+            <span class="error-message"></span>
+        </div>
+        <form autocomplete="off">
+            <div class="row">
+                <div class="col-25">
+                    <label for="country1">First Country</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="country1" name="country1" placeholder="First country...">
+                </div>
+            </div>
+            <div class="row country-result" id="country1_result">
+                <div class="flag-container"><img class="flag" id="country1_flag"></div>
+                <div class="info-container">
+                    <div>
+                        <span class="country-info" id="country1_name"></span>
+                    </div>
+                    <div>
+                        <span class="country-info" id="country1_capital"></span>
+                    </div>
+                    <div>
+                        <span class="country-info" id="country1_population"></span>
+                    </div>
+                    <div>
+                        <span class="country-info" id="country1_language"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country2">Second Country</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="country2" name="country2" placeholder="Second country...">
+                </div>
+            </div>
+            <div class="row country-result" id="country2_result">
+                <div class="flag-container"><img class="flag" id="country2_flag"></div>
+                <div class="info-container">
+                    <div>
+                        <span class="country-info" id="country2_name"></span>
+                    </div>
+                    <div>
+                        <span class="country-info" id="country2_capital"></span>
+                    </div>
+                    <div>
+                        <span class="country-info" id="country2_population"></span>
+                    </div>
+                    <div>
+                        <span class="country-info" id="country2_language"></span>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-25-button">
+                    <input type="button" value="Clear data">
+                </div>
+                <div class="col-75-button">
+                    <input type="submit" value="Compare">
+                </div>
+
+
+
+            </div>
+        </form>
+    </div>
+
+    <script src='bundle.js'></script>
+
+</body>
+
+</html>

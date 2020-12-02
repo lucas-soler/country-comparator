@@ -1,0 +1,164 @@
+/* Style inputs, select elements and textareas */
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+    outline: none;
+    text-transform: capitalize;
+}
+
+input[type=text]:focus {
+    border: 1px solid #4D90FE;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+span {
+    font-size: 15px;
+}
+
+
+/* Style the label to display next to the inputs */
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+
+/* Style the submit button */
+
+input[type=submit],
+input[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=button] {
+    float: left;
+    background-color: rgb(78, 78, 252)
+}
+
+
+/* Style the container */
+
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+/* Floating column for labels: 25% width */
+
+.col-25,
+.col-25-button {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+
+/* Floating column for inputs: 75% width */
+
+.col-75,
+.col-75-button {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.error-message-row {
+    background-color: rgb(247, 96, 96);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+}
+
+.error-message {
+    padding: 5px 5px 5px 5px;
+    display: inline-block;
+    color: white;
+}
+
+.country-result {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.flag-container {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.flag {
+    max-width: 100px;
+    height: auto;
+}
+
+.info-container {
+    width: 75%;
+    float: left;
+    font-size: 15px;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75 {
+        width: 100%;
+        margin-top: 0;
+    }
+    .col-25-button,
+    .col-75-button {
+        width: 50%;
+        margin-top: 20px;
+    }
+    input[type=submit],
+    input[type=button] {
+        width: 75%;
+        margin-top: 0;
+    }
+    .flag-container {
+        width: 40%;
+    }
+    .info-container {
+        width: 60%;
+    }
+    .country-info {
+        margin-left: 10px;
+    }
+}
